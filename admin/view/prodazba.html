@@ -1,0 +1,33 @@
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color: darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Prodazba</h2>
+       
+<table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>Prodazba Status</th>
+            <th>Prodazba Data</th>
+            <th>Kupuvac Ime</th>
+            <th>Kupuvac Prezime</th>
+            <th>Produckt</th>
+            <th>Product Out</th>
+            <th>Primac Ime</th>
+            <th>Primac Prezime</th>
+            <th>Delete Product</th>
+        </tr>
+    </thead>
+<tbody class="text-white" style="background-color: #8c3897;">
+    <tr ng-repeat="prodazba in prodazba">
+        <th>{{prodazba.prodazba_id}}</th>
+        <td>{{prodazba.prodazba_status}}</td>
+        <td>{{prodazba.prodazba_data}}</td>
+        <td>{{prodazba.user_first_name}}</td>
+        <td>{{prodazba.user_last_name}}</td>
+        <td>{{prodazba.product_name}}</td>
+        <td>{{prodazba.product_price_p}}</td>
+        <td>{{prodazba.primac_first_name}}</td>
+        <td>{{prodazba.primac_last_name}}</td>
+        <td><button ng-click="deleteRow('prodazba',prodazba.prodazba_id)" >Delete</button></td>
+    </tbody>
+</table>
+</div>

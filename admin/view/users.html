@@ -1,0 +1,28 @@
+
+<div class="container bg-light">
+<h2 class="float-right font-italic"  style="font-size: 4rem;color:darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Users</h2>
+        
+    
+<table class="table">
+<thead class="text-white" style="background-color: darkslateblue;">
+    <tr>
+        <th>R.B</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Delete User</th>
+    </tr>
+</thead>
+<tbody class="text-white" style="background-color: #8c3897;">
+    <tr ng-repeat="users in users"> 
+        <td>{{users.user_id}}</td>
+        <td>{{users.user_first_name}}</td>
+        <td>{{users.user_last_name}}</td>
+        <td>{{users.user_mobile}}</td>
+        <td>{{users.user_email}}</td>
+        <td><button ng-click="deleteRow('users',users.user_id)" >Delete</button></td>
+    </tbody>
+</table>
+
+</div>

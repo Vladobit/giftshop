@@ -1,0 +1,24 @@
+
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color: darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">City</h2>
+            
+        
+    <table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>City Name</th>
+            <th>City Region</th>
+            <th>Delete City</th>
+        </tr>
+    </thead>
+    <tbody class="text-white" style="background-color: #8c3897;">
+        <tr ng-repeat="city in city"> 
+            <td>{{city.city_id}}</td>
+            <td>{{city.city_name}}</td>
+            <td>{{city.city_region}}</td>
+            <td><button ng-click="deleteRow('city',city.city_id)" >Delete</button></td>
+        </tbody>
+    </table>
+    
+    </div>

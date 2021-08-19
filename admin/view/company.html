@@ -1,0 +1,30 @@
+
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color:darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Companies</h2>
+            
+        
+    <table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>Company Name</th>
+            <th>Company Address</th>
+            <th>Company City</th>
+            <th>Company Phone </th>
+            <th>Company Logo </th>
+            <th>Delete Company</th>
+        </tr>
+    </thead>
+    <tbody class="text-white" style="background-color: #8c3897;">
+        <tr ng-repeat="company in company"> 
+            <td>{{company.company_id}}</td>
+            <td>{{company.company_name}}</td>
+            <td>{{company.company_adresa}}</td>
+            <td>{{company.company_mesto}}</td>
+            <td>{{company.company_telefon}}</td>
+            <td>{{company.company_logo}}</td>
+            <td><button ng-click="deleteRow('company',company.company_id)" >Delete</button></td>
+        </tbody>
+    </table>
+    
+    </div>

@@ -1,0 +1,34 @@
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color: darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Producties</h2>
+       
+<table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>Product Name</th>
+            <th>Product Photo</th>
+            <th>Product Price In</th>
+            <th>Product Price Out</th>
+            <th>Product Description</th>
+            <th>Product Long Description</th>
+            <th>Product Company</th>
+            <th>Product Category</th>
+            <th>Delete Product</th>
+        </tr>
+    </thead>
+<tbody class="text-white" style="background-color: #8c3897;">
+    <tr ng-repeat="products in products">
+        <th>{{products.product_id}}</th>
+        <td>{{products.product_name}}</td>
+        <td>{{products.product_cover}}</td>
+        <td>{{products.product_price_n}}</td>
+        <td>{{products.product_price_p}}</td>
+        <td>{{products.product_description}}</td>
+        <td>{{products.product_text}}</td>
+        <td>{{products.company_name}}</td>
+        <td>{{products.category_name}}</td>
+        <!--<td ng-repeat="category in category">{{category.category_name}}</td> -->
+        <td><button ng-click="deleteRow('products',products.product_id)" >Delete</button></td>
+    </tbody>
+</table>
+</div>

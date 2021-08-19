@@ -1,0 +1,35 @@
+<div class="container bg-light border-dark">
+    <div class="row col-12 float-right">
+     <h2 class="font-italic" style="font-size: 3.2rem;color: darkslateblue;">New Primac<img class="img-fluid w-50 " src="logot1.png"  alt="Logo"></h2>   
+    </div>
+<div class="alert alert-success" ng-show="success">Uspesno vnesen zapis</div>
+<form  name="myForm">
+    <div class="form-group">
+        <label for="primac_first_name">First Name:</label>
+        <input type="text" class="form-control" placeholder="First name" id="primac_first_name" name="primac_first_name" ng-model="primac_first_name">
+    </div>
+    <div class="form-group">
+        <label for="primac_last_name">Last Name:</label>
+        <input type="text" class="form-control" placeholder="Last Name" id="primac_last_name" name="primac_last_name" ng-model="primac_last_name">
+    </div>
+    <div class="form-group">
+        <label for="primac_adresa">Address:</label>
+        <input type="text" class="form-control" placeholder="primac_adresa" id="primac_adresa" name="primac_adresa" ng-model="primac_adresa">
+    </div>
+    <div class="form-group">
+        <label for="primac_telefon">Phone Number:</label>
+        <span class="alert alert-danger" ng-show="myForm.primac_telefon.$invalid">Vnesete 9 cifri</span>
+        <input type="number" class="form-control" placeholder="primac_telefon"  ng-minlength="9" ng-maxlenght="9" id="primac_telefon" name="primac_telefon" ng-model="primac_telefon">
+    </div>
+    <div class="form-group">
+        <label for="city_id">City:</label>
+        <select class="form-control" id="city_id" name="city_id" ng-model="city_id">
+        <option ng-repeat="city in city" value="{{city.city_id}}">{{city.city_name}},{{city.city_region}}</option>
+        </select>
+    </div>
+    <div class="alert alert-danger" ng-show="error">Popolnetego pravilno formularot</div>
+    <button class="btn  mb-2 text-white" style="background-color: #8c3897;" ng-click="
+    (myForm.primac_telefon.$valid) ?
+    details_primac_fun(primac_first_name,primac_last_name,primac_adresa,primac_telefon,city_id) : error_fun()">SAVE</button>      
+</form>
+</div>

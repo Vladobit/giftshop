@@ -1,0 +1,26 @@
+<h3>Vraboteni</h3>
+<table class="table table-dark">
+<thead>
+    <tr>
+        <th>PK</th>
+        <th> <input type="text" placeholder="Search by Ime" id="searchByime" name="searchByime"
+            ng-model="searchByime"></th>
+        <th> <input type="text" placeholder="Search by Prezime" id="searchByprezime" name="searchByprezime"
+            ng-model="searchByprezime"></th>
+        <th>staz</th>
+        <th>godini</th>
+        <th>mobilen</th>
+        <th>DELETE</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="vraboteni in vraboteni | filter : {ime:searchByime,prezime:searchByprezime}"">
+        <td>{{vraboteni.vr_id}}</td>
+        <td>{{vraboteni.ime}}</td>
+        <td>{{vraboteni.prezime}}</td>
+        <td>{{vraboteni.staz}}</td>
+        <td>{{vraboteni.godini}}</td>
+        <td>{{vraboteni.mobilen}}</td>
+        <td><button ng-click="deleteRow('vraboteni',vraboteni.vr_id)" >Izbrishi</button></td>
+    </tbody>
+</table>

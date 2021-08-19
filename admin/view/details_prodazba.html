@@ -1,0 +1,49 @@
+<div class="container bg-light border-dark">
+    <div class="row col-12 float-right">
+     <h2 class="font-italic" style="font-size: 3.2rem;color: darkslateblue;">New Product<img class="img-fluid w-50 " src="logot1.png"  alt="Logo"></h2>   
+    </div>
+<div class="alert alert-success" ng-show="success">Uspesno vnesen zapis</div>
+<form  name="myForm">
+    <div class="form-group">
+        <label for="product_name">Product Name:</label>
+        <input type="text" class="form-control" placeholder="Product name" id="product_name" name="product_name" ng-model="product_name">
+    </div>
+    <div class="form-group">
+        <label for="product_cover">Product Photo:</label>
+        <input type="text" class="form-control" placeholder="Product cover" id="product_cover" name="product_cover" ng-model="product_cover">
+    </div>
+    <div class="form-group">
+        <label for="product_price_n">Price In:</label>
+        <span class="alert alert-danger" ng-show="myForm.product_price_n.$invalid">Vnesete poveke od 1 broj</span>
+        <input type="number" class="form-control" placeholder="Price in" id="product_price_n" name="product_price_n" ng-minlength="1" ng-maxlenght="9" ng-model="product_price_n">
+    </div>
+    <div class="form-group">
+        <label for="product_price_p">Price Out</label>
+        <input type="number" class="form-control" placeholder="Price Out" id="product_price_p" name="product_price_p" ng-model="product_price_p">
+    </div>
+    <div class="form-group">
+        <label for="product_description">Product Photo:</label>
+        <input type="text" class="form-control" placeholder="Product description" id="product_description" name="product_description" ng-model="product_description">
+    </div>
+    <div class="form-group">
+        <label for="product_text">Product Long Description:</label>
+        <input type="text" class="form-control" placeholder="Product text" id="product_text" name="product_text" ng-model="product_text">
+    </div>
+    <div class="form-group">
+        <label for="company_id">Product Company:</label>
+        <select class="form-control" id="company_id" name="company_id" ng-model="company_id">
+        <option ng-repeat="company in company" value="{{company.company_id}}">{{company.company_id}},{{company.company_name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="category_id">Product Category:</label>
+        <select class="form-control" id="category_id" name="category_id" ng-model="category_id">
+        <option ng-repeat="category in category" value="{{category.category_id}}">{{category.category_id}},{{category.category_name}}</option>
+        </select>
+    </div>
+    <div class="alert alert-danger" ng-show="error">Popolnetego pravilno formularot</div>
+    <button class="btn  mb-2 text-white" style="background-color: #8c3897;" ng-click="
+    (myForm.product_price_n.$valid) ?
+    details_products_fun(product_name,product_cover,product_price_n,product_price_p,product_description,product_text,company_id,category_id) : error_fun()">SAVE</button>      
+</form>
+</div>

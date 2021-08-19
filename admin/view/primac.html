@@ -1,0 +1,32 @@
+
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color:darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Primac</h2>
+            
+        
+    <table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>Fista Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Mobile </th>
+            <th>City </th>
+            <th>Region</th>
+            <th>Delete Primac</th>
+        </tr>
+    </thead>
+    <tbody class="text-white" style="background-color: #8c3897;">
+        <tr ng-repeat="primac in primac"> 
+            <td>{{primac.primac_id}}</td>
+            <td>{{primac.primac_first_name}}</td>
+            <td>{{primac.primac_last_name}}</td>
+            <td>{{primac.primac_adresa}}</td>
+            <td>{{primac.primac_telefon}}</td>
+            <td>{{primac.city_name}}</td>
+            <td>{{primac.city_region}}</td>
+            <td><button ng-click="deleteRow('primac',primac.primac_id)" >Delete</button></td>
+        </tbody>
+    </table>
+    
+    </div>

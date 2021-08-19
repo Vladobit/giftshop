@@ -1,0 +1,28 @@
+<h3>Dukani Lista</h3>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>PK</th>
+            <th>
+                <input type="text" placeholder="Search by Name" id="searchByDuk_ime" name="searchByDuk_ime"
+                ng-model="searchByDuk_ime">
+            </th>
+            <th>edb</th>
+            <th>
+                <input type="text" placeholder="Search by Grad" id="searchByGrad" name="searchByGrad"
+                ng-model="searchByGrad">
+            </th>
+            <th>telefon</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dukani in dukani | filter : {duk_ime:searchByDuk_ime,grad:searchByGrad}">
+            <td>{{dukani.duk_id}}</td>
+            <td>{{dukani.duk_ime}}</td>
+            <td>{{dukani.edb}}</td>
+            <td>{{dukani.grad}}</td>
+            <td>{{dukani.telefon}}</td>
+            <td><button ng-click="deleteRow('dukani',dukani.duk_id)">Izbrishi</button></td>
+        </tbody>
+    </table>

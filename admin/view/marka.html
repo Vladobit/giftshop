@@ -1,0 +1,29 @@
+<h3>Marka</h3>
+<table class="table table-dark">
+<thead>
+    <tr>
+        <th></th>
+        <th>
+            <select id="SearchByEU" name="SearchByEU" ng-model="SearchByEU">
+                <option value="1">Vozila od EU</option>
+                <option value="0">Others</option>
+            </select>
+        </th>
+        <th>marka_name</th>
+        <th>country</th>
+        <th>edb</th>
+        <th>adresa</th>
+        <th>Izbrishi</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="marki in marka | filter :{eu:SearchByEU}">
+        <td><img src="../uploads/{{marki.marka_cover_photo}}" alt="{{marki.marka_cover_photo}}" style="width: 40px;"></td>
+        <td>{{marki.eu}}</td>
+        <td>{{marki.marka_name}}</td>
+        <td>{{marki.country}}</td>
+        <td>{{marki.edb}}</td>
+        <td>{{marki.adresa}}</td>
+        <td><button ng-click="deleteRow('marki',marki.edb)" >Izbrishi</button></td>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+<div class="container bg-light border-dark">
+    <div class="row col-12 float-right">
+     <h2 class="font-italic" style="font-size: 3.2rem;color: darkslateblue;">New Category<img class="img-fluid w-50 " src="logot1.png"  alt="Logo"></h2>   
+    </div>
+<div class="alert" ng-show="success">Success input</div>
+    <form name="myForm ">
+    <div class="form-group">
+        <label for="category_name">Category Name:</label>
+        <input type="text" class="form-control" placeholder="Category Name" id="category_name" name="category_name" ng-model="category_name">
+    </div>
+    <div class="alert alert-danger" ng-show="error">Form is not correct</div>
+    <button class="btn  mb-2 text-white" style="background-color: #8c3897;" ng-click="
+    details_category_fun(category_name)">SAVE</button>    
+    </form>
+   </div>  
+</div>

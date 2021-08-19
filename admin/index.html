@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Giftshop A/B Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--povikan gotov CSS Bootstrap-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!--Angular script --->
+  <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/angular-route.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/routes.js"></script> 
+
+</head>
+<body ng-app="myApp" ng-controller="loginCtrl">
+    <div class="container-fluid w-50 h-50 text-center mt-5" style="background-color:lightgray;">
+        <h3 class="text-center">Administrator Login</h3>
+        <img src="logot1.png" class="img-fluid" alt="logo">
+    <form class=" align-items-center">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="username" class="form-control" name="username" placeholder="username" id="username" ng-model="username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" id="password" ng-model="password">
+        </div>
+          <button type="submit" class="btn mb-2 text-white font-weight-bold" style="background-color: rebeccapurple;" ng-click="login_function(username,password)">Login</button>
+      </form>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="container bg-light border-dark">
+    <div class="row col-12 float-right">
+     <h2 style="font-size: 3rem;color: darkslateblue;">City and Region<img class="img-fluid w-50 " src="logot1.png"  alt="Logo"></h2>   
+    </div>
+<div class="alert" ng-show="success">Success input</div>
+    <form name="myForm ">
+    <div class="form-group">
+        <label for="city_name">City Name:</label>
+        <input type="text" class="form-control" placeholder="City Name" id="city_name" name="city_name" ng-model="city_name">
+    </div>
+    <div class="form-group">
+        <label for="city_region">City Region:</label>
+        <input type="text" class="form-control" placeholder="Region Name" id="city_region" name="city_region" ng-model="city_region">
+    </div>
+    <div class="alert alert-danger" ng-show="error">Form is not correct</div>
+    <button class="btn  mb-2 text-white" style="background-color: #8c3897;" ng-click="
+    details_city_fun(city_name,city_region)">SAVE</button>    
+    </form>
+   </div>  
+</div>
