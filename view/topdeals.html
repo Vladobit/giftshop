@@ -1,0 +1,32 @@
+  <!--  =========================== Start Top Deals Area ========================  -->
+     
+  <div class="text-center font-weight-bolder" >
+    <div  style="background-color:#8c3897">      
+        <h2 style="margin: 5px;color: white;font-size:3rem;padding: 2px;"> Top Deals</h2>
+    </div> 
+    <div class="col-md-6 " style="margin:auto">
+      <label class="text-center text-white  w-75 font-weight-bold ml-5" style="font-size: larger;"><span style="font-size: xx-large;color:#8c3897 ;">Deals by Companies:</span>
+      <select class="custom-select custom-select-lg" id="SearchByCategory" style="font-size: larger;font-style: italic;color: #8c3897" name="SearchBycompany_id" ng-model="SearchBycompany_id">
+          <option style="font-size: larger;font-style: italic;color: #8c3897" value="1">Bozinovski</option>
+          <option style="font-size: larger;font-style: italic;color: #8c3897" value="2">Filigram</option>
+          <option style="font-size: larger;font-style: italic;color: #8c3897" value="3">Sv.Toma</option>
+          <option style="font-size: larger;font-style: italic;color: #8c3897" value="4">Javen</option>
+      </select></label>
+  </div>
+  <section class="brand-area" style="margin-top: 100px;">
+    <div class="row mx-auto justify-content-around" >    
+        <div class="col-md-3" ng-repeat="products in products | filter :{company_id:SearchBycompany_id}">   
+            <div class="card mb-2" style="width: 18rem;">
+                <img class="card-img-top img-thumbnail" src="./uploads/{{products.product_cover}}" alt="Card Logo">
+                <div class="card-body">
+                   <h5 class="card-title ">{{products.product_name}}</h5>
+                   <p class="card-text">Цена.....<span style="font-size: 1.5rem; font-weight: bolder;"> {{products.product_price_p}}</span> денари</p>
+                   <a href="#" class="btn font-weight-bold text-center text-white" style="background-color: #8c3897;"> Додај во корпа</a>
+                </div>
+            </div>
+        </div>  
+    </div>           
+</section>
+  </div>    
+
+  <!--  ============xxxx=========== End Top Deals Area ==========xxx=============  -->

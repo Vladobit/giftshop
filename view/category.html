@@ -1,0 +1,23 @@
+
+<div class="container bg-light">
+    <h2 class="float-right font-italic"  style="font-size: 4rem;color: darkslateblue;"><img class="img-fluid w-50 "  src="logot1.png"  alt="Logo">Category</h2>
+            
+        
+    <table class="table">
+    <thead class="text-white" style="background-color: darkslateblue;">
+        <tr>
+            <th>R.B</th>
+            <th>Category Name</th>
+            <th>Delete City</th>
+        </tr>
+    </thead>
+    <tbody class="text-white" style="background-color: #8c3897;">
+        <tr ng-repeat="category in category"> 
+            <td>{{category.category_id}}</td>
+            <td>{{category.category_name}}</td>
+            <td><button ng-click="deleteRow('category',category.category_id)" >Delete</button></td>
+        </tr>
+        </tbody>
+    </table>
+    
+    </div>
